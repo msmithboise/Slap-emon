@@ -7,13 +7,22 @@ let Squirtle = {
 
 let items ={
     protect: {name: "Protect", modifier: -2, description: "Protect!"},
-    shieldbreak: {name: "Shieldbreak", modifier: 2, description: "Shieldbreak!"},
-    heal: {name: "Heal", modifier: 2, description: "Heal!"}
+    Burn: {name: "Shieldbreak", modifier: 2, description: "Burn!"},
+    Waterstone: {name: "Heal", modifier: 2, description: "He's Evolving..."}
 }
 
 
 function giveProtect(){
 Squirtle.items.push(items.protect)
+console.log(Squirtle.items)
+}
+
+function giveBurn(){
+    Squirtle.items.push(items.Burn)
+    }
+
+function giveWaterstone(){
+Squirtle.items.push(items.Waterstone)
 }
 
 function addMods(){
@@ -27,13 +36,16 @@ for (let i = 0; i < Squirtle.items.length; i++) {
 }
 
 
+
 function hits(){
-    Squirtle.hits += 1 + addMods();
+    Squirtle.hits += 1 
+   
 }  
 
 
 function slap(){
  Squirtle.hp -= 1
+ + addMods();
  hits(Squirtle.hits)
  update(Squirtle.hp)
  }
@@ -41,6 +53,7 @@ function slap(){
 
 function fireball(){
     Squirtle.hp -= 5
+    + addMods();
     hits(Squirtle.hits)
     update(Squirtle.hp)
 }
@@ -48,6 +61,7 @@ function fireball(){
 
 function firestorm(){
     Squirtle.hp -=10
+    + addMods();
     update(Squirtle.hp)
     hits(Squirtle.hits)
 }
