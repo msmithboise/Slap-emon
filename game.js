@@ -2,68 +2,92 @@ let Squirtle = {
     name: 'Squirtle',
     hp: 100,
     hits: 0,
-    items: []
+    items: [],
+    img: 'opponentfront.png'
+}
+let Warturtle = {
+    name: 'Wartortle',
+    hp: 300,
+    hits: 0,
+    items: [],
+    img: 'wartortle.png'
+}
+let Blastoise = {
+    name: 'Blastoise',
+    hp: 600,
+    hits: 0,
+    items: [],
+    img: 'blastoise.png'
+}
+let currentTarget = Squirtle
+
+let items = {
+    protect: { name: "Protect", modifier: -2, description: "Protect!" },
+    Burn: { name: "Shieldbreak", modifier: 2, description: "Burn!" },
+    Waterstone: { name: "Heal", modifier: 2, description: "He's Evolving..." }
 }
 
-let items ={
-    protect: {name: "Protect", modifier: -2, description: "Protect!"},
-    Burn: {name: "Shieldbreak", modifier: 2, description: "Burn!"},
-    Waterstone: {name: "Heal", modifier: 2, description: "He's Evolving..."}
+
+function giveProtect() {
+    currentTarget.items.push(items.protect)
+    console.log(currentTarget.items)
 }
 
-
-function giveProtect(){
-Squirtle.items.push(items.protect)
-console.log(Squirtle.items)
+function giveBurn() {
+    currentTarget.items.push(items.Burn)
 }
 
-function giveBurn(){
-    Squirtle.items.push(items.Burn)
+function giveWaterstone() {
+    currentTarget.items.push(items.Waterstone)
+}
+
+function addMods() {
+    var total = 0
+
+    for (let i = 0; i < currentTarget.items.length; i++) {
+        let item = currentTarget.items[i];
+        total += item.modifier
     }
-
-function giveWaterstone(){
-Squirtle.items.push(items.Waterstone)
-}
-
-function addMods(){
-var total = 0
-
-for (let i = 0; i < Squirtle.items.length; i++) {
-    let item = Squirtle.items[i];
-    total += item.modifier
-}
- return total 
+    return total
 }
 
 
 
-function hits(){
-    Squirtle.hits += 1 
-   
-}  
+function hits() {
+    currentTarget.hits += 1
 
-
-function slap(){
- Squirtle.hp -= 1
- + addMods();
- hits(Squirtle.hits)
- update(Squirtle.hp)
- }
-
-
-function fireball(){
-    Squirtle.hp -= 5
-    + addMods();
-    hits(Squirtle.hits)
-    update(Squirtle.hp)
 }
 
 
-function firestorm(){
-    Squirtle.hp -=10
-    + addMods();
-    update(Squirtle.hp)
-    hits(Squirtle.hits)
+function slap() {
+    currentTarget.hp -= 1
+        + addMods();
+    hits(currentTarget.hits)
+    update(currentTarget.hp)
+}
+
+
+function fireball() {
+    currentTarget.hp -= 5
+        + addMods();
+    hits(currentTarget.hits)
+    update(currentTarget.hp)
+}
+
+
+function firestorm() {
+    currentTarget.hp -= 10
+        + addMods();
+    update(currentTarget.hp)
+    hits(currentTarget.hits)
+}
+
+function evolve() {
+    if (currentTarget.hp < 1) {
+        if(currentTarget == Squirtle){
+            currentTarget = Warturtle
+        }
+    }
 }
 
 
@@ -75,10 +99,11 @@ function firestorm(){
 
 
 
-
-function update(){
-    document.getElementById("health").innerHTML = Squirtle.hp;
-   document.getElementById("hits").innerHTML = Squirtle.hits;
-    document.getElementById("name").innerHTML = Squirtle.name;
+function update() {
+    evolve()
+    document.getElementById("health").innerHTML = currentTarget.hp;
+    document.getElementById("hits").innerHTML = currentTarget.hits;
+    document.getElementById("name").innerHTML = currentTarget.name;
+    document.getElementById("opp").src = currentTarget.img;
 }
 update()
