@@ -5,7 +5,7 @@ let Squirtle = {
     items: [],
     img: 'opponentfront.png'
 }
-let Warturtle = {
+let Wartortle = {
     name: 'Wartortle',
     hp: 300,
     hits: 0,
@@ -84,11 +84,17 @@ function firestorm() {
 
 function evolve() {
     if (currentTarget.hp < 1) {
-        if(currentTarget == Squirtle){
-            currentTarget = Warturtle
+        if (currentTarget == Squirtle) {
+            currentTarget = Wartortle
+
+
+        } else if (currentTarget == Wartortle) {
+            currentTarget = Blastoise
         }
+
     }
 }
+
 
 
 
