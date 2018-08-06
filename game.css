@@ -22,7 +22,7 @@ top: 28vh;
     }
 
     .hero-image{
-        background-image: url(scene.png);
+        background-image: url(battlegroundone.png);
         background-size: cover;
         height: 90vh;
         background-position: center bottom;
@@ -34,6 +34,6 @@ top: 28vh;
 button{
     font-family: 'Press Start 2P', cursive;
     position: relative;
-    top: 41vh;
+    top: 38vh;
     left:  5vw;
 }

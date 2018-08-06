@@ -21,6 +21,11 @@ let Blastoise = {
 }
 let currentTarget = Squirtle
 
+let hero = {
+    heroStatus: 0,
+    heroImg: ["", "charmeleon.png", 'charizard.png']
+}
+
 let items = {
     protect: { name: "Protect", modifier: -2, description: "Protect!" },
     Burn: { name: "Shieldbreak", modifier: 2, description: "Burn!" },
@@ -96,7 +101,13 @@ function evolve() {
 }
 
 
-
+function playerEvolve(){
+    hero.heroStatus++
+    if(hero.heroStatus > hero.heroImg.length - 1){
+        hero.heroStatus = hero.heroImg.length -1
+    }
+    document.getElementById("hero").setAttribute('src', hero.heroImg[hero.heroStatus])
+}
 
 
 
