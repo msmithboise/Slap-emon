@@ -1,17 +1,24 @@
 #opp{
 width: 200px;
 height: 200px;
+position: relative;
+left: 66vw;
+top: 28vh;
 
 }
 
 #hero{
     width: 200px;
     height: 200px;
-    align-content: center;
+    position: relative;
+    left: 20vw;
+    top: 40vh;
+
     }
 
     h4{
-     flex-direction: column;   
+     flex-direction: column; 
+     font-family: 'Press Start 2P', cursive;  
     }
 
     .hero-image{
@@ -23,3 +30,10 @@ height: 200px;
         background-position: center;
         background-repeat: no-repeat;
     }
+
+button{
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    top: 41vh;
+    left:  5vw;
+}
