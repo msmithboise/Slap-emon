@@ -111,6 +111,14 @@ function evolve() {
 }
 
 
+function victory(){
+    if (Blastoise.hp < 0) {
+        Blastoise = Pokeball
+    }
+    victory()
+}
+
+
 function playerEvolve(){
     hero.heroStatus++
     if(hero.heroStatus > hero.heroImg.length - 1){
@@ -128,6 +136,7 @@ function playerEvolve(){
 
 function update() {
     evolve()
+    
     document.getElementById("health").innerHTML = currentTarget.hp;
     document.getElementById("hits").innerHTML = currentTarget.hits;
     document.getElementById("name").innerHTML = currentTarget.name;

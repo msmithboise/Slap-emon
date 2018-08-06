@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="game.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
+
 <body>
     <div class="container-fluid hero-image">
-        <div id = "cpu" class="row">
-<img id ="opp" src="opponentfront.png" alt="">
-</h4>
-<h4>Name:
-    <span id="name"></span>
-</h4>
-<h4>HP:
-    <span id ="health"></span>
-</h4>
-<h4>Hits:
-        <span id="hits"></span>
-
-        </div>
-        <div id = "player" class="row">
-<img id="hero"src="herofront.png" alt="">
-        </div>
-        <div id = "panel" class="row">
-            <div id = "options-left" class="col-sm-6">
-            <button type="button" onclick="slap()" class="btn btn-success">Slap</button>
-            <button type="button" onclick="fireball()"class="btn btn-warning">Fireball</button>
-            <button type="button" onclick="firestorm()"class="btn btn-danger">Firestorm</button>
-            </div>
-            <div id = "items" class= "col-sm-6">
-                <button type="button" onclick="giveBurn(); playerEvolve()" class="btn btn-info">Evolve!</button>
-            <button type="button"  onclick="giveProtect()" class="btn btn-primary">Protect</button>
-            <button type="button" onclick="giveWaterstone()" class="btn btn-info">Water Stone</button>
+        <div id="cpu" class="row">
+            <img id="opp" src="opponentfront.png" alt="">
+            <div class="col-sm-6">
+            </h4>
+            <h4>Name:
+                <span id="name"></span>
+            </h4>
+            
+            <h4>HP:
+                <span id="health"></span>
+            </h4>
+            <h4>Hits:
+                <span id="hits"></span>
             </div>
 
-            </div>
         </div>
+        <div id="player" class="row">
+            <img id="hero" src="herofront.png" alt="">
+        </div>
+        <div id="panel" class="row">
+            <div id="options-left" class="col-sm-6">
+                <button type="button" onclick="slap()" class="btn btn-success">Slap</button>
+                <button type="button" onclick="fireball()" class="btn btn-warning">Fireball</button>
+                <button type="button" onclick="firestorm()" class="btn btn-danger">Firestorm</button>
+                <button type="button" onclick="giveProtect()" class="btn btn-primary">Protect</button>
+                <button type="button" onclick="giveWaterstone()" class="btn btn-info">Water Stone</button>
+            </div>
+            <div id="items" class="col-sm-6">
+                <button type="button" onclick="giveBurn(); playerEvolve()" class="btn btn-dark">Evolve!</button>
+            </div>
+
+        </div>
+    </div>
     </div>
     <script src="game.js"></script>
 </body>
+
 </html>
