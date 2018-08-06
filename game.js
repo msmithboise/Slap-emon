@@ -19,6 +19,16 @@ let Blastoise = {
     items: [],
     img: 'blastoise.png'
 }
+
+let Pokeball ={
+    name: 'Blastoise',
+    hp: 0,
+    hits: 0,
+    img: 'pokeball.png'
+}
+
+
+
 let currentTarget = Squirtle
 
 let hero = {
