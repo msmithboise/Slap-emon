@@ -21,7 +21,7 @@ let Blastoise = {
 }
 
 let Pokeball ={
-    name: 'Blastoise',
+    name: "...",
     hp: 0,
     hits: 0,
     img: 'pokeball.png'
@@ -33,7 +33,7 @@ let currentTarget = Squirtle
 
 let hero = {
     heroStatus: 0,
-    heroImg: ["", "charmeleon.png", 'charizard.png']
+    heroImg: ["", "charmeleon.png", 'charizardBig.png']
 }
 
 let items = {
@@ -79,6 +79,7 @@ function slap() {
         + addMods();
     hits(currentTarget.hits)
     update(currentTarget.hp)
+    
 }
 
 
@@ -108,13 +109,36 @@ function evolve() {
         } else if (currentTarget == Blastoise) {
             currentTarget = Pokeball
            if (currentTarget = Pokeball){
-               alert("You Win!!!")
+            typeWriter()
             
            }
         }
 
     }
 }
+
+
+document.getElementById("demo").addEventListener("click", function(){
+    document.getElementById("demo").innerHTML = "";
+    typeWriter()
+});
+
+
+var i = 0;
+var txt = "You Win!"; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+
+
+
 
 function reset() {
     location.reload();
