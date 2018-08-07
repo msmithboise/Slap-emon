@@ -31,6 +31,14 @@ top: 28vh;
         background-repeat: no-repeat;
     }
 
+    /* .box{
+        background-image: url(box1.png);
+        background-size: cover;
+        position: relative;
+        top: 30vh;
+        /* size: 5vh; */
+    /* } */ 
+
 button{
     font-family: 'Press Start 2P', cursive;
     position: relative;
