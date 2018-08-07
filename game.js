@@ -105,6 +105,12 @@ function evolve() {
 
         } else if (currentTarget == Wartortle) {
             currentTarget = Blastoise
+        } else if (currentTarget == Blastoise) {
+            currentTarget = Pokeball
+           if (currentTarget = Pokeball){
+               alert("You Win!!!")
+            
+           }
         }
 
     }
