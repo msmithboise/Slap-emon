@@ -21,6 +21,14 @@ top: 28vh;
      font-family: 'Press Start 2P', cursive;  
     }
 
+    h3{
+        flex-direction: column; 
+        font-family: 'Press Start 2P', cursive; 
+        position: relative;
+        top: 10vh; 
+       }
+   
+
     .hero-image{
         background-image: url(battlegroundone.png);
         background-size: cover;

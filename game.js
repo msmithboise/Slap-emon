@@ -125,7 +125,7 @@ document.getElementById("demo").addEventListener("click", function(){
 
 
 var i = 0;
-var txt = "You Win!"; /* The text */
+var txt = "It's super effective!  You Win!"; /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
