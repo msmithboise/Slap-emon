@@ -84,7 +84,7 @@ function slap() {
 
 function fireball() {
     currentTarget.hp -= 5
-        + addMods();
+    + addMods();
     hits(currentTarget.hits)
     update(currentTarget.hp)
 }
@@ -116,6 +116,9 @@ function evolve() {
     }
 }
 
+function reset() {
+    location.reload();
+ }
 
 function victory(){
     if (Blastoise.hp < 0) {
